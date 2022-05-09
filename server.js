@@ -5,7 +5,7 @@ const express = require('express');
 var SerialPort = require("serialport");
 var parsers = SerialPort.parsers;
 
-var port = new SerialPort('/dev/cu.usbmodem14441', {
+var port = new SerialPort('/dev/cu.usbmodem143301', {
   baudrate: 115200,
   parser: parsers.readline('\r\n')
 });
@@ -13,7 +13,7 @@ var port = new SerialPort('/dev/cu.usbmodem14441', {
 const app = express()
   .use('/js', browserify('./client', {transform: [glslify]}))
   .use(express.static('./public'))
-  .listen(process.env.PORT || 3000);
+  .listen(process.env.PORT || 8000);
 
 var io = require('socket.io')(app);
 

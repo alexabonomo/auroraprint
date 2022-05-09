@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src='//code.jquery.com/jquery-1.7.2.min.js'></script>
-    <script src='//localhost:3000/socket.io/socket.io.js'></script>
+    <script src='//localhost:8000/socket.io/socket.io.js'></script>
     <script src="./js/index.js"></script>
   </head>
  <script>
@@ -17,7 +17,7 @@ var incoming;
      return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
  }
 
-  var socket = io.connect('//localhost:3000');
+  var socket = io.connect('//localhost:8000');
       socket.on('mysocket', function(data) {
               // console.log(data);
               // var res = data.split(",");

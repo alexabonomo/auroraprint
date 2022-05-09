@@ -12,6 +12,8 @@
     "express": "^4.13.3",
     "node-osc": "^1.2.0",
     "serialport": "^4.0.7",
-    "socket.io": "^1.7.4"
+    "socket.io": "^1.7.4",
+    "utf-8-validate":"^5.0.2",
+    "bufferutil":"4.0.1"
   }
 }
